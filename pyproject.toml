@@ -1,0 +1,21 @@
+[project]
+name = "shared-memory-mcp"
+version = "0.1.0"
+description = "Standalone stdio MCP server for user-owned agent memory"
+requires-python = ">=3.10"
+dependencies = []
+license = { text = "MIT" }
+
+[project.scripts]
+shared-memory-mcp = "md_cg.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["md_cg", "md_cg.lexicon", "md_cg.mreview", "md_cg.protocol", "md_cg.semantic"]
+py-modules = ["utf8_boot"]
+
+[tool.setuptools.package-data]
+md_cg = ["*.json", "*.md", "lexicon/*.md", "mreview/rules/*", "protocol/*", "semantic/*.md"]

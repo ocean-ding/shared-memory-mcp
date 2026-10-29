@@ -1,0 +1,29 @@
+# Never commit local memory or runtime state.
+memory/
+data/mdcg/
+data/state/
+data/aux/
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+*.log
+tokens.json
+.env
+.env.*
+!.env.example
+
+# Python and build output.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local editor and OS files.
+.DS_Store
+.idea/
+.vscode/

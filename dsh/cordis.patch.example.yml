@@ -1,0 +1,19 @@
+# DeepSeek Harness MCP configuration example.
+# Replace the two absolute paths before using it.
+- id: mcp-shared-memory
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: shared_memory
+    transport: stdio
+    command: python3
+    args: ['/ABSOLUTE/PATH/TO/shared-memory-mcp/scripts/run_mcp.py']
+    cwd: '/ABSOLUTE/PATH/TO/shared-memory-mcp'
+    env:
+      MDCG_ROOT: '/ABSOLUTE/PATH/TO/YOUR/PRIVATE/MEMORY'
+      MDCG_AUX_ROOT: '/ABSOLUTE/PATH/TO/YOUR/PRIVATE/MEMORY-RUNTIME/aux'
+      MDCG_STATE_ROOT: '/ABSOLUTE/PATH/TO/YOUR/PRIVATE/MEMORY-RUNTIME/state'
+      MDCG_DATA_ROOT: '/ABSOLUTE/PATH/TO/YOUR/PRIVATE/MEMORY-RUNTIME/data'
+      MDCG_ACTOR: 'your-name'
+      MDCG_MCP_SURFACE: 'kernel'
+      PYTHONUTF8: '1'
+    failOnStartupError: false

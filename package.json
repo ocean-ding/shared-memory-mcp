@@ -1,0 +1,16 @@
+{
+  "name": "shared-memory-mcp",
+  "version": "0.1.0",
+  "description": "A standalone stdio MCP server for durable, user-owned agent memory.",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ocean-ding/shared-memory-mcp.git"
+  },
+  "upstream": {
+    "name": "@furongjun1999/dsh-memory",
+    "version": "0.9.17",
+    "url": "https://github.com/FuRongJun-1999/dsh-memory"
+  }
+}
